@@ -1,0 +1,13 @@
+## Run Database (Postgres) via Docker, no need of installation
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: docker-java10x-container
+    environment:
+      POSTGRES_DB: dockerjava10x
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5431:5432"
+    restart: always
